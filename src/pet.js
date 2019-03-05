@@ -3,6 +3,8 @@ function Pet(name) {
   this.age = 0;
   this.hunger = 0
   this.fitness = 10
+  this.children = []
+
   Pet.prototype.growUp = function() {
     this.age++;
     this.hunger += 5;
@@ -39,6 +41,13 @@ function Pet(name) {
     else {
       return true;
     }
+  }
+  Pet.prototype.haveBaby = function(name) {
+    name = new Pet(name);
+    this.children.push(name)
+  }
+  Pet.prototype.adoptChild = function(name) {
+    this.children.push(name)
   }
 }
   module.exports = Pet;

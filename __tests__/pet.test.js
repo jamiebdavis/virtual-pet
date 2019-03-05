@@ -10,6 +10,4 @@ describe("constructor", () => {
         expect(pet.name).toEqual("Fido")
     });
 
-    it("")
-
 });
